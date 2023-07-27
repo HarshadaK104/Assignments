@@ -1,4 +1,4 @@
-// C++ program to generate all passwords for given characters
+// Assignment 1: C++ program to generate all passwords for given characters
 #include <iostream>
 using namespace std;
 
@@ -14,10 +14,7 @@ void generate(char* arr, int i, string s, int len)
 
 	// iterate through the array
 	for (int j = 0; j < len; j++) {
-
 		// Create new string with next character
-		// Call generate again until string has
-		// reached its len
 		string appended = s + arr[j];
 		generate(arr, i - 1, appended, len);
 	}
